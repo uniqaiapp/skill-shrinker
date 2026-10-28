@@ -20,6 +20,8 @@
 
 </div>
 
+English · [Русский](README.ru.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
+
 skill-shrinker compresses `CLAUDE.md`, `AGENTS.md`, `SKILL.md` and `.cursor/rules` files so Claude Code, Cursor and Codex load fewer tokens per turn. It is a skill (the rewrite procedure) plus one dependency-free Python script that finds duplicate rules, contradictions, narration, long examples and dead sections, reports tokens before and after, and checks that every MUST / NEVER / ALWAYS / DO NOT sentence survived the rewrite. Every instruction stays; the padding goes.
 
 | **Audit with line numbers** | **Rewrite by rule, not by taste** | **Prove nothing was lost** |
