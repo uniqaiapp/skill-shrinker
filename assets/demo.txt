@@ -1,0 +1,15 @@
+$ python3 scripts/shrink.py audit CLAUDE.md
+> {b:188} lines · 1,345 words · 8,413 chars · 2,468 tokens {d:(estimate)}
+> CONSTRAINTS (KEEP VERBATIM)  {y:23}
+> DUPLICATE LINES              {y:2} groups
+> CONTRADICTIONS               {y:1}
+!   L39 vs L185  Always use tabs / Never use tabs
+> NARRATION / FILLER           {y:16} lines
+> LONG CODE BLOCKS             {y:2} (> 15 lines)
+# edit by the rules in SKILL.md, then verify
+@wait 700
+$ python3 scripts/shrink.py compare CLAUDE.md CLAUDE.shrunk.md
+>                    before   after   change
+> lines                 188      54    {l:-71%}
+> tokens (estimate)   2,468     979    {l:-60%}
++ 23 constraints: 21 kept verbatim, 1 in references, 1 lost (on purpose)

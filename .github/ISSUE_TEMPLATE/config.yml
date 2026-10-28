@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/uniqaiapp/skill-shrinker/discussions
+    about: Ask how to use the skill or propose a rewrite rule before opening an issue.
+  - name: Security or private matters
+    url: mailto:support@uniqai.app
+    about: Do not open a public issue for vulnerabilities.

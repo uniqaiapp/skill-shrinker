@@ -1,0 +1,7 @@
+file                                 lines  words   chars  tokens (estimate)
+-----------------------------------  -----  -----  ------  -----------------
+examples/claude-md/before/CLAUDE.md    188  1,345   8,413              2,468
+examples/claude-md/after/CLAUDE.md      54    486   3,169                979
+examples/skill-md/before/SKILL.md      107    864   5,594              1,778
+examples/skill-md/after/SKILL.md        45    393   2,441                761
+total                                  394  3,088  19,617              5,986

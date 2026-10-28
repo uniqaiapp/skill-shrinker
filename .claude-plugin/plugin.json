@@ -1,0 +1,11 @@
+{
+  "name": "skill-shrinker",
+  "version": "0.1.0",
+  "description": "Shrinks CLAUDE.md, AGENTS.md, SKILL.md and .cursor/rules files so they cost fewer tokens per turn without losing an instruction: measures size, flags duplicate and contradictory rules, narration and oversized examples, keeps MUST/NEVER constraints verbatim, moves rare detail to references/.",
+  "author": { "name": "UniqAI", "email": "support@uniqai.app", "url": "https://uniqai.app/?utm_source=github&utm_medium=plugin&utm_campaign=skill-shrinker" },
+  "homepage": "https://github.com/uniqaiapp/skill-shrinker",
+  "repository": "https://github.com/uniqaiapp/skill-shrinker",
+  "license": "MIT",
+  "keywords": ["claude-code", "skill", "skill-md", "agents-md", "cursor-rules", "claude-md", "token-optimization", "context-window"],
+  "skills": ["./"]
+}

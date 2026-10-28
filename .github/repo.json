@@ -1,0 +1,10 @@
+{
+  "name": "skill-shrinker",
+  "description": "Skill shrinker: compresses SKILL.md, AGENTS.md, CLAUDE.md and .cursor/rules files so agents load fewer tokens per turn. Finds duplicate rules, long examples, dead sections; reports tokens before/after (stdlib Python, no deps). Keeps every instruction, drops the padding. Claude Code skill + Codex/Cursor rules. By UniqAI.",
+  "homepage": "https://uniqai.app/chat?utm_source=github&utm_medium=readme&utm_campaign=skill-shrinker",
+  "topics": ["claude-code", "claude-skills", "agent-skills", "skill-md", "agents-md", "cursor-rules", "claude-md", "token-optimization", "context-window", "developer-tools", "prompt-engineering", "uniqai"],
+  "social_preview": "assets/social-preview.png",
+  "default_branch": "main",
+  "features": { "issues": true, "discussions": true, "wiki": false, "projects": false },
+  "license": "MIT"
+}

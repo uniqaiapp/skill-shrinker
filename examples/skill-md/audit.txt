@@ -1,0 +1,46 @@
+skill-shrinker audit: examples/skill-md/before/SKILL.md
+  107 lines · 864 words · 5,594 chars · 1,778 tokens (estimate)
+
+CONSTRAINTS (KEEP VERBATIM)  9
+  L24    Do not use this skill to write commit messages.
+  L25    Do not use this skill for internal sprint reports; it only looks at merged pull request…
+  L34    Never mention the author by name; the team does not do that in public notes.
+  L35    ALWAYS put breaking changes first, in their own "Breaking" section, even if there is on…
+  L36    Do not create the GitHub release yourself; the user publishes.
+  L45    Never mention the author by name.
+  L46    Do not include pull requests that only bump dependencies unless the user asks.
+  L47    Never mention the author by name.
+  L97    If `gh` is not authenticated, stop and tell the user; do not try to log in.
+
+DUPLICATE LINES              1 groups
+  L45, L47
+      - Never mention the author by name.
+
+NEAR-DUPLICATES              1 pairs
+  L17 ~ L20  (0.80)
+      - The user asks what changed between two tags.
+      - The user asks what changed between two tags or two commits.
+
+CONTRADICTIONS               0
+
+NARRATION / FILLER           5 lines
+  L8     [In this document] Welcome to the release notes skill. In this document we will explain,…
+  L12    [Basically] Basically, the skill does three things: it collects the merged pull r…
+  L29    [Please note that] Please note that all of the steps below assume `gh` is installed and …
+  L38    [Remember that] Remember that steps 1 and 2 are the only ones that touch the network.…
+  L52    [Feel free to] Here is a complete example of what the output should look like for a …
+
+LONG CODE BLOCKS             1 (> 15 lines)
+  L54-L82  27 lines → keep the shortest working example, move the rest to references/
+
+LONG SECTIONS                0 (> 40 content lines)
+
+LONG TABLES                  0 (> 12 rows)
+
+EMPTY SECTIONS               1
+  L102   ## Troubleshooting
+
+REPEATED HEADINGS            0
+
+Lines touched by at least one finding: 21 of 107
+Next: edit by hand (SKILL.md rules), then: python3 scripts/shrink.py compare BEFORE AFTER

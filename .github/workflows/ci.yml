@@ -1,0 +1,29 @@
+name: tests
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions: { contents: read }
+jobs:
+  python:
+    if: ${{ hashFiles('tests/run.py') != '' }}
+    runs-on: ubuntu-latest
+    strategy: { matrix: { python: ["3.9", "3.12"] } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - run: python3 tests/run.py
+  node:
+    if: ${{ hashFiles('tests/run.mjs') != '' }}
+    runs-on: ubuntu-latest
+    strategy: { matrix: { node: ["18", "22"] } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ matrix.node }}" }
+      - run: node tests/run.mjs
+  size:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test "$(du -sk . | cut -f1)" -lt 3072   # repo under 3 MB

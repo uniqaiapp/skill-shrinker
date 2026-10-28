@@ -1,0 +1,81 @@
+skill-shrinker audit: examples/claude-md/before/CLAUDE.md
+  188 lines · 1,345 words · 8,413 chars · 2,468 tokens (estimate)
+
+CONSTRAINTS (KEEP VERBATIM)  23
+  L19    You MUST run `pnpm test` before every commit.
+  L20    You MUST NOT commit directly to `main`; open a pull request.
+  L21    NEVER edit files under `packages/db/migrations` by hand; generate them with `pnpm db:mi…
+  L22    ALWAYS use pnpm for installing packages.
+  L23    Never use npm or yarn in this repository.
+  L24    Do not add a dependency without saying why in the PR description.
+  L26    Always use pnpm for installing packages.
+  L33    Use the `@/` alias for imports inside `apps/web`; do not use long relative paths like `…
+  L35    Server actions go in `apps/web/actions` and must be marked with `"use server"`.
+  L37    Do not use `any`.
+  L38    Do not fight the formatter.
+  L39    Always use tabs for indentation.
+  L43    Never swallow an error silently: either rethrow, or log it with `logger.error` and retu…
+  L45    Remember that route handlers must return `NextResponse.json({ error })` with the right …
+  L120   You should always restart the dev server after changing anything in `packages/db`, beca…
+  L131   Do not use POST for everything.
+  L134   Never return a Date object or a Unix timestamp.
+  L137   Do not add `/v1/` prefixes.
+  L177   You MUST NOT commit directly to `main`; open a pull request.
+  L184   The worker uses its own Prisma client instance; do not import the web app's.
+  L185   Never use tabs for indentation.
+  L187   Convert at the edge, in the UI, never in the database layer.
+  L188   Handlers must be idempotent.
+
+DUPLICATE LINES              2 groups
+  L20, L177
+      - You MUST NOT commit directly to `main`; open a pull request.
+  L22, L26
+      - ALWAYS use pnpm for installing packages.
+
+NEAR-DUPLICATES              1 pairs
+  L32 ~ L36  (0.67)
+      - Prefer named exports over default exports.
+      - Prefer named exports to default exports.
+
+CONTRADICTIONS               1
+  L39 vs L185
+      - Always use tabs for indentation.
+      - Never use tabs for indentation.
+
+NARRATION / FILLER           16 lines
+  L3     [In this document] Welcome! In this document we will walk through everything you need to…
+  L7     [Basically] Lumen is a small SaaS product for scheduling social media posts. Basi…
+  L9     [As you can see] As you can see, there are three packages:
+  L15    [It is worth noting] It is worth noting that the three packages share one TypeScript confi…
+  L25    [Keep in mind that] - Keep in mind that the worker and the web app share the Prisma clien…
+  L30    [It is important to] We use TypeScript everywhere. It is important to keep the code strict…
+  L43    [Obviously] Obviously errors should be handled. Wrap external calls (Stripe, soci…
+  L45    [Remember that] Remember that route handlers must return `NextResponse.json({ error }…
+  L49    [In order to] We use Vitest for unit tests and Playwright for end-to-end tests. In …
+  L57    [make sure to] Please make sure to run `pnpm test` before every commit. Tests live n…
+  L59    [Note that] Note that the e2e suite needs the seed data; run `pnpm db:seed` first…
+  L63    [The following section] The following section describes how to set up a development environme…
+  L65    [We recommend that you] First, you will need Node 20 and pnpm 9. We recommend that you instal…
+  L120   [You should always] You should always restart the dev server after changing anything in `…
+  L128   [Here we] All HTTP endpoints live under `apps/web/app/api`. Here we describe th…
+  L178   [Last but not least] - Squash-merge pull requests. Last but not least, delete the branch a…
+
+LONG CODE BLOCKS             2 (> 15 lines)
+  L67-L97  29 lines → keep the shortest working example, move the rest to references/
+  L141-L171  29 lines → keep the shortest working example, move the rest to references/
+
+LONG SECTIONS                2 (> 40 content lines)
+  ## Local setup  L61-L125  53 lines → references/local-setup.md + a one-line pointer
+  ## API conventions  L126-L172  41 lines → references/api-conventions.md + a one-line pointer
+
+LONG TABLES                  1 (> 12 rows)
+  L101-L116  14 rows → references/
+
+EMPTY SECTIONS               1
+  L180   ## Deployment
+
+REPEATED HEADINGS            1
+  L61 again at L122  Local setup
+
+Lines touched by at least one finding: 112 of 188
+Next: edit by hand (SKILL.md rules), then: python3 scripts/shrink.py compare BEFORE AFTER
