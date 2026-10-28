@@ -94,9 +94,9 @@ def estimate_tokens(text: str) -> int:
 
     Each word is ~1 token per 6 Latin characters (minimum 1); non-Latin words ~1 token per
     2.5 characters; digit runs ~1 token per 3 digits; every punctuation mark 1 token; each
-    run of newlines 1 token. It is an estimate: expect it to be within roughly a fifth of the
-    real count on English Markdown, worse on code and non-English text. Use --tokens api for
-    exact numbers.
+    run of newlines 1 token. It is an estimate with no measured error bound (not calibrated
+    against any tokenizer); worse on code and non-English text. Use --tokens api for exact
+    numbers.
     """
     n = 0
     for m in WORD_RE.finditer(text):

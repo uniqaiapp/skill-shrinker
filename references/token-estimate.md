@@ -22,7 +22,7 @@ Other vendors have equivalent endpoints; the script does not call them. If you n
 
 Why these numbers: subword tokenizers merge common short words into one token and split long or rare words into several; punctuation and Markdown markup are usually one token each; non-Latin scripts get far fewer characters per token. The heuristic was tuned to land near the common "about four characters per token" rule on English Markdown with code blocks, while still moving in the right direction on code-heavy and non-English files. It is not calibrated against any specific tokenizer and is deliberately simple so it can be read in ten lines.
 
-What to expect: on English instruction files, roughly within a fifth of the real count either way; on code blocks and tables, typically an undercount; on Russian or CJK text, errors can be larger. Relative changes (before vs after on the same kind of text) are more reliable than absolute values, which is why `compare` is the number that matters.
+What to expect: the heuristic is not calibrated against any tokenizer, so there is no measured error bound to quote; on code blocks and tables it tends to undercount, and on Russian or CJK text the error is larger than on English prose. Relative changes (before vs after on the same kind of text) are more reliable than absolute values, which is why `compare` is the number that matters.
 
 Rules for publishing a number:
 

@@ -186,7 +186,7 @@ The script never writes to your files; it prints. The skill writes the rewrite t
 <details>
 <summary><b>How accurate is the token number?</b></summary>
 
-With `ANTHROPIC_API_KEY` set it is the exact count from Anthropic's `count_tokens` for the model named in the output (default `claude-opus-5-5`, override with `SHRINK_MODEL`). Without a key it is a documented heuristic ([`references/token-estimate.md`](references/token-estimate.md)), expect it to be off by roughly a fifth on English Markdown and more on code or non-Latin text, and every table says `estimate` when that is what it is.
+With `ANTHROPIC_API_KEY` set it is the exact count from Anthropic's `count_tokens` for the model named in the output (default `claude-opus-5-5`, override with `SHRINK_MODEL`). Without a key it is a documented heuristic ([`references/token-estimate.md`](references/token-estimate.md)), it is not calibrated against any tokenizer, so treat absolute values as rough, compare only numbers produced the same way, and expect larger error on code and non-Latin text. Every table says `estimate` when that is what it is.
 
 </details>
 

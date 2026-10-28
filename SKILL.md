@@ -1,6 +1,6 @@
 ---
 name: skill-shrinker
-description: Shrinks CLAUDE.md, AGENTS.md, SKILL.md and .cursor/rules files so they cost fewer tokens on every turn without losing a single instruction. Measures size (chars, words, tokens), flags duplicate, overlapping and contradictory rules, narration, oversized examples and dead sections, then rewrites with MUST/NEVER constraints kept verbatim and rare detail moved to references/. Use when the user says a CLAUDE.md, AGENTS.md, SKILL.md, cursor rule or system prompt is too long, asks to shrink, compress, trim, dedupe, tidy or audit an instruction file, asks how many tokens a skill costs, or wants progressive disclosure for a skill. Not for shortening prose, docs or READMEs written for humans, and not for minifying code.
+description: Shrinks CLAUDE.md, AGENTS.md, SKILL.md and .cursor/rules files so they cost fewer tokens on every turn without losing a single instruction. Measures size (chars, words, tokens), flags duplicate, overlapping and contradictory rules, narration, oversized examples and dead sections, then rewrites with MUST/NEVER constraints kept verbatim and rare detail moved to references/. Use when the user says a CLAUDE.md, AGENTS.md, SKILL.md, cursor rule or system prompt is too long, asks to shrink, shorten, compress, trim, dedupe, tidy or audit an instruction file, asks how many tokens a skill costs, or wants progressive disclosure for a skill. Not for shortening prose, docs or READMEs written for humans, and not for minifying code.
 license: MIT
 metadata:
   version: 0.1.0
@@ -81,7 +81,7 @@ Reproduce: `python3 scripts/shrink.py audit examples/claude-md/before/CLAUDE.md 
 - Heuristics work on lines and sentences. A rule split over two paragraphs, or restated with different vocabulary, is not caught as a duplicate; read the file as well.
 - Contradiction detection matches "always X" against "never X" on the same words. "Use tabs" versus "indent with two spaces" is not detected.
 - The constraint check compares normalised sentences. Shortening a constraint sentence counts as losing it; that is intended, keep them verbatim.
-- The token estimate is a documented heuristic (`references/token-estimate.md`), expect it to be off by roughly a fifth on English Markdown and more on code or non-Latin text. Use `--tokens api` for numbers you publish.
+- The token estimate is a documented heuristic (`references/token-estimate.md`), it is not calibrated against any tokenizer, so treat absolute values as rough and compare only before/after numbers produced the same way; the error is larger on code and non-Latin text. Use `--tokens api` for numbers you publish.
 - English phrase lists. Narration in other languages is not flagged; constraints in other languages are not protected.
 - Markdown only. Does not parse YAML beyond the frontmatter boundary, HTML comments, or MDX.
 

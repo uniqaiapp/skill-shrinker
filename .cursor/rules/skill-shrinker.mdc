@@ -1,5 +1,5 @@
 ---
-description: Shrinks CLAUDE.md, AGENTS.md, SKILL.md and .cursor/rules files so they cost fewer tokens per turn without losing an instruction. Use when an instruction file or system prompt is too long, or the user asks to shrink, compress, trim, dedupe or audit one.
+description: Shrinks CLAUDE.md, AGENTS.md, SKILL.md and .cursor/rules files so they cost fewer tokens per turn without losing an instruction. Use when an instruction file or system prompt is too long, or the user asks to shrink, shorten, compress, trim, dedupe or audit one.
 globs:
 alwaysApply: false
 ---

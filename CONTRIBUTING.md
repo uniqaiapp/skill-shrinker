@@ -33,3 +33,5 @@ Tests compare the committed outputs in `examples/` byte-for-byte with what the s
 
 - `.gitignore` does not list a Node dependency folder: this repo has no Node code, and the forbidden-string test would flag the entry.
 - The maintainer-only PNG script lives in the shared design kit, not in `scripts/`, so no file here needs an absolute path.
+- `.github/workflows/ci.yml` drops the shared template's job-level `if: hashFiles(...)` guards and the Node job: `hashFiles` is evaluated before checkout at job level, so the guard would skip every job, and this repo has no Node code.
+- `assets/demo.svg` plays once and holds the final frame (the org kit's default), instead of looping.

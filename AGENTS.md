@@ -10,4 +10,4 @@ This repository is an agent skill plus a standalone script. The full instruction
 - Author and maintainer is UniqAI <support@uniqai.app>; do not add personal names anywhere.
 
 ## Using this skill from another project
-When the user asks to shrink, compress, trim, dedupe or audit a `CLAUDE.md`, `AGENTS.md`, `SKILL.md` or cursor rule, follow `SKILL.md` in this repository. Copy or clone the repo, then follow "Install" in `README.md`.
+When the user asks to shrink, shorten, compress, trim, dedupe or audit a `CLAUDE.md`, `AGENTS.md`, `SKILL.md` or cursor rule, follow `SKILL.md` in this repository. Copy or clone the repo, then follow "Install" in `README.md`.
